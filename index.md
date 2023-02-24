@@ -3,10 +3,10 @@ layout: default
 ---
 
 
-# Diabetes Prediction
+<h1 align="center"> Diabetes Prediction </h1>
 
-### Team 23
-#### Hajin Kim, Naman Dangi, Netra Ghaisas, Hubert Pan, Pooja Pache
+<h3 align="center"> Team 23 </h3>
+<h4 align="center"> Hajin Kim, Naman Dangi, Netra Ghaisas, Hubert Pan, Pooja Pache </h4>
 
 
 ## Introduction:
@@ -47,7 +47,7 @@ We might need to address class imbalance, duplicates, missing values, data norma
 
 ## Timeline:
 
-https://gtvault.sharepoint.com/:x:/s/CS7641MLProject309/EYjPqZjCQPlPtKfMPRpZCpgBLjKtI0X59lts722aNCQ_6w?e=8tbJqe 
+<iframe width="700" height="700" frameborder="0" scrolling="no" src="https://gtvault.sharepoint.com/sites/CS7641MLProject309/_layouts/15/Doc.aspx?sourcedoc={98a9cf88-40c2-4ff9-b4a7-cc3d1a590a98}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=true&resen=false&ed1JS=false"></iframe>
 
 
 
