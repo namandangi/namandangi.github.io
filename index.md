@@ -6,7 +6,7 @@ layout: default
 <h1 align="center"> Diabetes Prediction </h1>
 
 <h3 align="center"> Team 23 </h3>
-<h4 align="center"> Hajin Kim, Naman Dangi, Netra Ghaisas, Hubert Pan, Pooja Pache </h4>
+<h4 align="center"> Naman Dangi, Netra Ghaisas, Hubert Pan, Hajin Kim, Pooja Pache </h4>
 
 
 ## Introduction:
@@ -38,16 +38,22 @@ For the project, we plan to conduct a comparative analysis of the performance of
 The specific metrics used for this comparison will be determined by the models chosen for evaluation. In terms of results, it is anticipated that certain machine learning algorithms will demonstrate superior performance in relation to others.
 We might need to address class imbalance, duplicates, missing values, data normalization, and determining optimum number of clusters based on further analysis of the dataset.
 
+
+## Timeline:
+
+<iframe width="700" height="700" frameborder="0" scrolling="no" src="https://gtvault.sharepoint.com/sites/CS7461MLProjectGroup23/_layouts/15/Doc.aspx?sourcedoc={3313c554-d0e7-4d86-aad0-ed957fcbcf4c}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=true&resen=false&ed1JS=false"></iframe>
+
+## Contribution Table:
+
+<iframe width="700" height="350" frameborder="0" scrolling="no" src="https://gtvault.sharepoint.com/sites/CS7461MLProjectGroup23/_layouts/15/Doc.aspx?sourcedoc={2b953a2b-9772-41aa-99fc-ba5949bab060}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=true&resen=false&ed1JS=false"></iframe>
+
+
 ## References: 
 
 - Teboul, Alex. Diabetes Health Indicators Dataset. https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset. Accessed 23 Feb. 2023.
 - CDC - BRFSS - Survey Data & Documentation. 29 Aug. 2022, https://www.cdc.gov/brfss/data_documentation/index.htm.
 - Xie Z, Nikolayeva O, Luo J, Li D. Building Risk Prediction Models for Type 2 Diabetes Using Machine Learning Techniques. Prev Chronic Dis 2019;16:190109. DOI: http://dx.doi.org/10.5888/pcd16.190109external icon.
-- American Diabetes Association. Economic costs of diabetes in the U.S. In 2007. Diabetes Care. 2008 Mar;31(3):596-615. doi: 10.2337/dc08-9017. Erratum in: Diabetes Care. 2008 Jun;31(6):1271. PMID: 18308683.
-
-## Timeline:
-
-<iframe width="700" height="700" frameborder="0" scrolling="no" src="https://gtvault.sharepoint.com/sites/CS7641MLProject309/_layouts/15/Doc.aspx?sourcedoc={98a9cf88-40c2-4ff9-b4a7-cc3d1a590a98}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=true&resen=false&ed1JS=false"></iframe>
-
+- American Diabetes Association; Economic Costs of Diabetes in the U.S. in 2007. Diabetes Care 1 March 2008; 31 (3): 596–615. https://doi.org/10.2337/dc08-9017
+- Xie Z, Nikolayeva O, Luo J, Li D. Building Risk Prediction Models for Type 2 Diabetes Using Machine Learning Techniques. Prev Chronic Dis 2019;16:190109. DOI: http://dx.doi.org/10.5888/pcd16.190109 
 
 
