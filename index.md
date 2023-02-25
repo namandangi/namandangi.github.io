@@ -8,6 +8,8 @@ layout: default
 <h3 align="center"> Team 23 </h3>
 <h4 align="center"> Naman Dangi, Netra Ghaisas, Hubert Pan, Hajin Kim, Pooja Pache </h4>
 
+## Video Presentation
+[Presentation link](https://drive.google.com/file/d/1t_1J68w3xckdhbXIvkJ59LCGbe7P8sfG/view?usp=share_link)
 
 ## Introduction:
 
