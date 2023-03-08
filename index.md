@@ -3,29 +3,30 @@ layout: default
 ---
 
 
-<h1 align="center"> Diabetes Prediction </h1>
+<h1 align="center"> Diabetes Risk Prediction </h1>
 
 <h3 align="center"> Team 23 </h3>
 <h4 align="center"> Naman Dangi, Netra Ghaisas, Hubert Pan, Hajin Kim, Pooja Pache </h4>
 
+## Video Presentation
+[Presentation link](https://drive.google.com/file/d/1t_1J68w3xckdhbXIvkJ59LCGbe7P8sfG/view?usp=share_link)
 
 ## Introduction:
 
-Diabetes is a serious chronic disease that can lead to reduced quality of life and life expectancy. Type 2 diabetes typically develops in adulthood and can often be managed with lifestyle changes and/or medication. Prediabetes is a condition which entails higher blood sugar levels than normal but not high enough to be classified as type 2 diabetes. The CDC has indicated that as of 2019, 37.3 million Americans have diabetes and 96 million have prediabetes, and 1 in 5 diabetics and 8 in 10 prediabetics are unaware of their risk. 
+Diabetes is a serious chronic disease that can lead to reduced quality of life and life expectancy. Type 2 diabetes typically develops in adulthood and can often be managed with lifestyle changes and/or medication. Prediabetes is a condition which entails higher blood sugar levels than normal but not high enough to be classified as type 2 diabetes. The CDC has indicated that as of 2019, 37.3 million Americans have diabetes and 96 million have prediabetes, and 1 in 5 diabetics and 8 in 10 prediabetics are unaware of their risk [2]. 
 
-Complications like cardiovascular disease, vision loss, lower-limb amputation, and kidney disease are associated with chronically high blood sugar levels for those with diabetes. Predictive models can assist medical professionals in identifying patients who pose a high risk of developing diabetes even before symptoms show up, enabling early intervention and treatment to prevent or delay the onset of associated complications.
+Complications like cardiovascular disease, vision loss, lower-limb amputation, and kidney disease are associated with chronically high blood sugar levels for those with diabetes [3]. Predictive models can assist medical professionals in identifying patients who pose a high risk of developing diabetes even before symptoms show up, enabling early intervention and treatment to prevent or delay the onset of associated complications.
 
-We plan on using the Diabetes Health Indicators dataset from Kaggle and will be predicting the Diabetes_012 column based on the other columns. The dataset is based on 253,680 survey responses from the CDC's BRFSS2015 survey.
+We plan on using the [Diabetes Health Indicators dataset from Kaggle](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset) [1] and will be predicting the Diabetes_012 column based on the other columns. The dataset is based on 253,680 survey responses from the CDC's BRFSS2015 survey.
 
 ## Problem Definition:
 
 Identifying individuals who have or at high risk for diabetes is a critical component for public health initiatives that deal with diabetes.
 
-For this project we plan on using the following dataset: 
-- https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset to:
+For this project we plan on using the [Diabetes Health Indicators dataset](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset) to:
 
-    - Build models that accurately predict if someone has diabetes or pre-diabetes
-    - Identify if there are any features that are more highly correlated with diabetes than others
+- Build models that accurately predict if someone has diabetes or pre-diabetes
+- Identify if there are any features that are more highly correlated with diabetes than others
 
 ## Methods:
 
@@ -55,10 +56,9 @@ We might need to address class imbalance, duplicates, missing values, data norma
 
 ## References: 
 
-- Teboul, Alex. Diabetes Health Indicators Dataset. https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset. Accessed 23 Feb. 2023.
-- CDC - BRFSS - Survey Data & Documentation. 29 Aug. 2022, https://www.cdc.gov/brfss/data_documentation/index.htm.
-- Xie Z, Nikolayeva O, Luo J, Li D. Building Risk Prediction Models for Type 2 Diabetes Using Machine Learning Techniques. Prev Chronic Dis 2019;16:190109. DOI: http://dx.doi.org/10.5888/pcd16.190109external icon.
-- American Diabetes Association; Economic Costs of Diabetes in the U.S. in 2007. Diabetes Care 1 March 2008; 31 (3): 596–615. https://doi.org/10.2337/dc08-9017
-- Xie Z, Nikolayeva O, Luo J, Li D. Building Risk Prediction Models for Type 2 Diabetes Using Machine Learning Techniques. Prev Chronic Dis 2019;16:190109. DOI: http://dx.doi.org/10.5888/pcd16.190109 
+1. Teboul, Alex. Diabetes Health Indicators Dataset. [https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset). Accessed 23 Feb. 2023.
+2. CDC - BRFSS - Survey Data & Documentation. 29 Aug. 2022, [https://www.cdc.gov/brfss/data_documentation/index.htm](https://www.cdc.gov/brfss/data_documentation/index.htm).
+3. American Diabetes Association; Economic Costs of Diabetes in the U.S. in 2007. Diabetes Care 1 March 2008; 31 (3): 596–615. [https://doi.org/10.2337/dc08-9017](https://doi.org/10.2337/dc08-9017)
+4. Xie Z, Nikolayeva O, Luo J, Li D. Building Risk Prediction Models for Type 2 Diabetes Using Machine Learning Techniques. Prev Chronic Dis 2019;16:190109. DOI: [http://dx.doi.org/10.5888/pcd16.190109](http://dx.doi.org/10.5888/pcd16.190109) 
 
 
