@@ -45,14 +45,14 @@ We might need to address class imbalance, duplicates, missing values, data norma
 <iframe width="700" height="700" frameborder="0" scrolling="no" src="https://gtvault.sharepoint.com/sites/CS7461MLProjectGroup23/_layouts/15/Doc.aspx?sourcedoc={3313c554-d0e7-4d86-aad0-ed957fcbcf4c}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=true&resen=false&ed1JS=false"></iframe>
 
 (Static Image Alternate)
-<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/gantt.png" width="700" height="700">
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/gantt.png">
 
 ## Contribution Table:
 
 <iframe width="700" height="350" frameborder="0" scrolling="no" src="https://gtvault.sharepoint.com/sites/CS7461MLProjectGroup23/_layouts/15/Doc.aspx?sourcedoc={2b953a2b-9772-41aa-99fc-ba5949bab060}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=true&resen=false&ed1JS=false"></iframe>
 
 (Static Image Alternate)
-<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/contri.png" width="700" height="700">
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/contri.png">
 
 ## References: 
 
