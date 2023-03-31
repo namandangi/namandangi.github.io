@@ -74,11 +74,7 @@ The metric used to evaluate the clustering results did not show a significant im
 (Static Image Alternate)
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/gantt.png">
 
-## Contribution Table:
-
-<iframe width="700" height="350" frameborder="0" scrolling="no" src="https://gtvault.sharepoint.com/:x:/s/CS7461MLProjectGroup23/ERtlKzBku2pNrF-vjMnlrakBST-E9raC4hnfxxzjbX9Mag?e=OY4dFp"></iframe>
-
-(Static Image Alternate)
+## Mid-Term Contribution Table:
 <img src="https://github.com/namandangi/namandangi.github.io/blob/main/static/MidTerm%20Contribution%20Chart.png">
 
 ## References: 
