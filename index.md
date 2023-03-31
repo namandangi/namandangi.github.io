@@ -33,12 +33,39 @@ For this project we plan on using the [Diabetes Health Indicators dataset](https
 Initially, data cleaning and preprocessing will be our fundamental tasks. After data transformation of raw data into a usable format, we will split the dataset into a train (80%) and test (20%) set using Python libraries. As part of this process we may sample the data in a way to remedy the class imbalance that is present in the data. Further, we aim to implement five algorithms for: Supervised and Unsupervised learning. We decided to use Logistic Regression, Decision Trees and Random Forest algorithms for supervised learning while, for unsupervised learning, we intend to use K Means clustering and Gaussian Mixture Model.
 Additionally, we plan on data visualization, feature exploration, and comparing accuracy scores of the different supervised and unsupervised algorithms we have used for diabetes prediction.
 
+-- add Data pre-processing --
+
+Supervised: Logistic Regression
+In our initial data analysis, we applied the logistic regression algorithm to our large dataset and opted for the SAGA (Stochastic Average Gradient Descent) solver instead of the default LBFGS (Limited-memory Broyden-Fletcher-Goldfarb-Shanno) solver. This decision was based on SAGA's support for L1 regularization, which can help with feature selection and reducing overfitting. However, we encountered overfitting and to address it, we employed both SMOTE oversampling and Stratified K-fold undersampling techniques. To further enhance our model's accuracy, we utilized PCA for dimensionality reduction. We experimented with different combinations of the number of PCA components and the number of folds, monitoring their impact on recall, accuracy, roc score and explained variance.
+
+Unsupervised: KMeans
+As part of the initial data exploration we also ran the KMeans algorithm on the dataset to explore how well the data was partitioned. This was done via the “elbow method” by repeatedly running KMeans multiple times with different numbers of clusters, evaluating those clusters against a set of metrics, and then looking at how increasing the target cluster count affected the measured cluster evaluation scores by graphing the results. For the purposes of this study we looked at the following cluster evaluation scores: purity, weighted f1, and silhouette across the geometric sequence from 3 to 100.
+Initially, data cleaning and preprocessing will be our fundamental tasks. After data transformation of raw data into a usable format, we will split the dataset into a train (80%) and test (20%) set using Python libraries. As part of this process we may sample the data in a way to remedy the class imbalance that is present in the data. Further, we aim to implement five algorithms for: Supervised and Unsupervised learning. We decided to use Logistic Regression, Decision Trees and Random Forest algorithms for supervised learning while, for unsupervised learning, we intend to use K Means clustering and Gaussian Mixture Model.
+Additionally, we plan on data visualization, feature exploration, and comparing accuracy scores of the different supervised and unsupervised algorithms we have used for diabetes prediction.
+
+
+
+
 ## Potential Results and Discussion:
 
 For the project, we plan to conduct a comparative analysis of the performance of the various models. In order to accomplish this, we will take into consideration a range of potential factors, such as Confusion Matrix, Accuracy, ROC Curves, mutual information scores, and mean squared error.
 The specific metrics used for this comparison will be determined by the models chosen for evaluation. In terms of results, it is anticipated that certain machine learning algorithms will demonstrate superior performance in relation to others.
-We might need to address class imbalance, duplicates, missing values, data normalization, and determining optimum number of clusters based on further analysis of the dataset.
+We might need to address class imbalance, duplicates, missing values, data normalization, and determining optimum number of clusters based on further analysis of the dataset.For the project, we plan to conduct a comparative analysis of the performance of the various models. In order to accomplish this, we will take into consideration a range of potential factors, such as Confusion Matrix, Accuracy, ROC Curves, mutual information scores, and mean squared error.
 
+ -- Write about data preprocessing results: --
+
+During the data preprocessing stage, we did not detect any null values, but we did come across missing values and duplicates.
+
+Supervised: Logistic Regression:
+After evaluating the performance of the Logistic regression algorithm on our dataset, we discovered a class imbalance issue where the recall value for the Pre Diabetes class was zero. To address this issue, we applied the SMOTE oversampling and Stratified K-fold undersampling techniques separately, but both techniques individually resulted in higher accuracies but lower recall and precision metrics for the Pre Diabetes class. A combination of both techniques demonstrated better results, although the accuracies were not optimal. Additionally, we observed that varying the number of PCA components affected the accuracy and roc score, with the Non-diabetic and diabetic classes achieving the highest scores when the number of PCA components equaled the total number of features. The explained variance also increased as the number of PCA components increased. However, utilizing all components can be computationally expensive and may not produce an optimal model. In addition, modifying the number of folds in the Stratified K-fold undersampling technique had a minor effect on accuracy. However, increasing the number of folds can lead to increased computational complexity, prolonged processing times, and greater sensitivity to noise in the data. Consequently, based on the performance metrics of Logistic regression, we concluded that it is not the most effective supervised learning algorithm for our diabetes dataset, and we intend to investigate other algorithms for improved performance.
+
+[Supervised Result Image]
+
+Unsupervised: KMeans
+The metric used to evaluate the clustering results did not show a significant improvement as the number of clusters increases. In addition, the confusion matrix reveals that all predicted clusters contain mostly points belonging to the Diabetes_012 class, indicating that the clustering algorithm is not able to identify meaningful patterns or clusters in the data. This observation suggests that a different clustering algorithm or preprocessing technique may be more suitable for this dataset. For instance, increasing the number of initializations for the K Means algorithm with larger values of K may improve the clustering results. By using larger initializations, the algorithm will generate more candidate solutions with different starting points and increase the chance of finding a good local optimum. The expectation is that the algorithm can detect more compact clusters that accurately reflect the actual partitions in the data, resulting in an enhancement of the clustering quality measurement. However, it is important to note that increasing the number of initializations and K can also lead to a longer computational time and higher memory usage.
+
+
+[image here]
 
 ## Timeline:
 
