@@ -57,46 +57,56 @@ The dataset contains 22 features, including 22 discrete and 7 continuous variabl
 
 <div align="center">
 
-1. Features 
+1. Features
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/histogram.png">
-
+<br>
 2. No Missing Values 
 <br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/check_null.png">
+<br>
 
 3. Influential
 <br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/correlation_heatmap.png">
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/correlation_bargraph.png">
+<br>
 
 4. Relation between Age and Diabetes
 <br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/age_diabetes.png">
+<br>
 
 5. Relation between Gender and Diabetes
 <br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/gender_diabetes.png">
+<br>
 
 6. Relation between Income and Diabetes
 <br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/income_diabetes.png">
+<br>
 
 7. Relation between Education and Diabetes
 <br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/education_diabetes.png">
+<br>
 
 8. Checking Combined Effects of Smoking and Heavy Alcohol Consumption
 <br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/smoke_hvyalcohol.png">
+<br>
 
 9. Checking Combined Effects of High Blood Pressure and High cholesterol
 <br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/highbp_highcol.png">
+<br>
 
 10. Checking Combined Effects of Stroke and Heart Disease  Attacks
 <br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/stroke_heartdis.png">
+<br>
 
 </div>                                                                                                                      
                                                                                                                             
@@ -113,7 +123,7 @@ Unsupervised: KMeans
 The metric used to evaluate the clustering results did not show a significant improvement as the number of clusters increases. In addition, the confusion matrix reveals that all predicted clusters contain mostly points belonging to the Diabetes_012 class, indicating that the clustering algorithm is not able to identify meaningful patterns or clusters in the data. This observation suggests that a different clustering algorithm or preprocessing technique may be more suitable for this dataset. For instance, increasing the number of initializations for the K Means algorithm with larger values of K may improve the clustering results. By using larger initializations, the algorithm will generate more candidate solutions with different starting points and increase the chance of finding a good local optimum. The expectation is that the algorithm can detect more compact clusters that accurately reflect the actual partitions in the data, resulting in an enhancement of the clustering quality measurement. However, it is important to note that increasing the number of initializations and K can also lead to a longer computational time and higher memory usage.
 
 
-[image here]
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/kmeans_result.png">
 
 ## Timeline:
 
