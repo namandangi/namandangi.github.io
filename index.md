@@ -88,14 +88,64 @@ We might need to address class imbalance, duplicates, missing values, data norma
 
 During the data preprocessing stage, we did not detect any null values, but we did come across missing values and duplicates.
 
-Supervised: Logistic Regression:
-After evaluating the performance of the Logistic regression algorithm on our dataset, we discovered a class imbalance issue where the recall value for the Pre Diabetes class was zero. To address this issue, we applied the SMOTE oversampling and Stratified K-fold undersampling techniques separately, but both techniques individually resulted in higher accuracies but lower recall and precision metrics for the Pre Diabetes class. A combination of both techniques demonstrated better results, although the accuracies were not optimal. Additionally, we observed that varying the number of PCA components affected the accuracy and roc score, with the Non-diabetic and diabetic classes achieving the highest scores when the number of PCA components equaled the total number of features. The explained variance also increased as the number of PCA components increased. However, utilizing all components can be computationally expensive and may not produce an optimal model. In addition, modifying the number of folds in the Stratified K-fold undersampling technique had a minor effect on accuracy. However, increasing the number of folds can lead to increased computational complexity, prolonged processing times, and greater sensitivity to noise in the data. Consequently, based on the performance metrics of Logistic regression, we concluded that it is not the most effective supervised learning algorithm for our diabetes dataset, and we intend to investigate other algorithms for improved performance.
-
-[Supervised Result Image]
+### Supervised Learning with Logistic Regression
+After evaluating the performance of the Logistic regression algorithm on our dataset, we discovered a class imbalance issue where the recall value for the Pre Diabetes class was zero.
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/logistic1.png">
+Accuracy: 0.827817307483082
 
-Unsupervised: KMeans
+ROC curves for non-diabetes, pre-diabetes and diabetes classes
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/logistic2.png">
+
+
+
+To address this issue, we applied the SMOTE oversampling and Stratified K-fold undersampling techniques separately, but both techniques individually resulted in higher accuracies but lower recall and precision metrics for the Pre Diabetes class.
+
+Classification report after applying SMOTE
+
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/logistic3.png">
+
+
+Accuracy: 0.44358857192593076
+
+ROC curves for logistic regression after applying SMOTE oversampling technique to handle class imbalance
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/log4.png">
+
+
+ROC curves for logistic regression after applying Stratified K-Fold cross-validation technique to handle class imbalance
+
+For K = 5, mean accuracy: 0.8252553489240425
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/log5.png">
+
+
+A combination of both techniques demonstrated better results, although the accuracies were not optimal. 
+
+ROC curves for logistic regression after applying SMOTE and Stratified K-Fold cross-validation techniques to handle class imbalance
+
+For K = 5, Mean Accuracy: 0.44293480446825706
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/log6.png">
+
+
+Additionally, we observed that varying the number of PCA components affected the accuracy and ROC score, with the Non-diabetic and diabetic classes achieving the highest scores when the number of PCA components equaled the total number of features.
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/log7.png">
+
+The explained variance also increased as the number of PCA components increased. 
+
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/log8.png">
+
+
+However, utilizing all components can be computationally expensive and may not produce an optimal model. 
+
+In addition, modifying the number of folds in the Stratified K-fold undersampling technique had a minor effect on accuracy. However, increasing the number of folds can lead to increased computational complexity, prolonged processing times, and greater sensitivity to noise in the data. Consequently, based on the performance metrics of Logistic regression, we concluded that it is not the most effective supervised learning algorithm for our diabetes dataset, and we intend to investigate other algorithms for improved performance.
+
+
+### Unsupervised Learning with KMeans
 The metric used to evaluate the clustering results did not show a significant improvement as the number of clusters increases. In addition, the confusion matrix reveals that all predicted clusters contain mostly points belonging to the Diabetes_012 class, indicating that the clustering algorithm is not able to identify meaningful patterns or clusters in the data. This observation suggests that a different clustering algorithm or preprocessing technique may be more suitable for this dataset. For instance, increasing the number of initializations for the K Means algorithm with larger values of K may improve the clustering results. By using larger initializations, the algorithm will generate more candidate solutions with different starting points and increase the chance of finding a good local optimum. The expectation is that the algorithm can detect more compact clusters that accurately reflect the actual partitions in the data, resulting in an enhancement of the clustering quality measurement. However, it is important to note that increasing the number of initializations and K can also lead to a longer computational time and higher memory usage.
 
 
