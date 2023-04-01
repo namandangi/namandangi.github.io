@@ -52,41 +52,55 @@ For the project, we plan to conduct a comparative analysis of the performance of
 The specific metrics used for this comparison will be determined by the models chosen for evaluation. In terms of results, it is anticipated that certain machine learning algorithms will demonstrate superior performance in relation to others.
 We might need to address class imbalance, duplicates, missing values, data normalization, and determining optimum number of clusters based on further analysis of the dataset.For the project, we plan to conduct a comparative analysis of the performance of the various models. In order to accomplish this, we will take into consideration a range of potential factors, such as Confusion Matrix, Accuracy, ROC Curves, mutual information scores, and mean squared error.
 
- The dataset contains 22 features, including 22 discrete and 7 continuous variables, with Diabetes_012 serving as the target variable. HighBP, HighChol, BMI, Stroke, GenHlth, MentHlth, PhysHlth, Age, Education, and Income were identified as the most influential features for diabetes. Smoking and HvyAlcoholConsump, Stroke and HeartDiseaseorAttack, and HighBP and HighChol are features that together increase the risk of diabetes.Based on the findings, the risk of diabetes is equally high for both males and females. However, people who are aged 45 and above are more susceptible to diabetes and pre-diabetes. Additionally, individuals with lower education and income are also at a higher risk of developing diabetes.
+Data Preprocessing: 
+The dataset contains 22 features, including 22 discrete and 7 continuous variables, with Diabetes_012 serving as the target variable. HighBP, HighChol, BMI, Stroke, GenHlth, MentHlth, PhysHlth, Age, Education, and Income were identified as the most influential features for diabetes. Smoking and HvyAlcoholConsump, Stroke and HeartDiseaseorAttack, and HighBP and HighChol are features that together increase the risk of diabetes.Based on the findings, the risk of diabetes is equally high for both males and females. However, people who are aged 45 and above are more susceptible to diabetes and pre-diabetes. Additionally, individuals with lower education and income are also at a higher risk of developing diabetes.
+
+<div align="center">
 
 1. Features 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/histogram.png">
 
-2. No Missing Values
+2. No Missing Values 
+</br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/check_null.png">
 
 3. Influential
+</br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/correlation_heatmap.png">
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/correlation_bargraph.png">
 
 4. Relation between Age and Diabetes
+</br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/age_diabetes.png">
 
 5. Relation between Gender and Diabetes
+</br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/gender_diabetes.png">
 
 6. Relation between Income and Diabetes
+</br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/income_diabetes.png">
 
 7. Relation between Education and Diabetes
+</br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/education_diabetes.png">
 
 8. Checking Combined Effects of Smoking and Heavy Alcohol Consumption
+</br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/smoke_hvyalcohol.png">
 
 9. Checking Combined Effects of High Blood Pressure and High cholesterol
+</br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/highbp_highcol.png">
 
 10. Checking Combined Effects of Stroke and Heart Disease  Attacks
+</br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/stroke_heartdis.png">
 
-During the data preprocessing stage, we did not detect any null values, but we did come across missing values and duplicates.
+</div>                                                                                                                      
+                                                                                                                            
+During the data preprocessing stage, we did not detect any null values, but we did come across duplicate rows.
 
 Supervised: Logistic Regression:
 After evaluating the performance of the Logistic regression algorithm on our dataset, we discovered a class imbalance issue where the recall value for the Pre Diabetes class was zero. To address this issue, we applied the SMOTE oversampling and Stratified K-fold undersampling techniques separately, but both techniques individually resulted in higher accuracies but lower recall and precision metrics for the Pre Diabetes class. A combination of both techniques demonstrated better results, although the accuracies were not optimal. Additionally, we observed that varying the number of PCA components affected the accuracy and roc score, with the Non-diabetic and diabetic classes achieving the highest scores when the number of PCA components equaled the total number of features. The explained variance also increased as the number of PCA components increased. However, utilizing all components can be computationally expensive and may not produce an optimal model. In addition, modifying the number of folds in the Stratified K-fold undersampling technique had a minor effect on accuracy. However, increasing the number of folds can lead to increased computational complexity, prolonged processing times, and greater sensitivity to noise in the data. Consequently, based on the performance metrics of Logistic regression, we concluded that it is not the most effective supervised learning algorithm for our diabetes dataset, and we intend to investigate other algorithms for improved performance.
