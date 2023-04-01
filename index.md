@@ -33,15 +33,15 @@ For this project we plan on using the [Diabetes Health Indicators dataset](https
 Initially, data cleaning and preprocessing will be our fundamental tasks. After data transformation of raw data into a usable format, we will split the dataset into a train (80%) and test (20%) set using Python libraries. As part of this process we may sample the data in a way to remedy the class imbalance that is present in the data. Further, we aim to implement five algorithms for: Supervised and Unsupervised learning. We decided to use Logistic Regression, Decision Trees and Random Forest algorithms for supervised learning while, for unsupervised learning, we intend to use K Means clustering and Gaussian Mixture Model.
 Additionally, we plan on data visualization, feature exploration, and comparing accuracy scores of the different supervised and unsupervised algorithms we have used for diabetes prediction.
 
-Data Pre-Processing and EDA
+### Data Pre-Processing and EDA
 
 To start with, we used Python's Pandas and NumPy libraries to load and explore the dataset. For visualizations, we used Matplotlib and Seaborn libraries. As part of pre-processing, we checked for data types, missing and null values, duplicate values and class imbalances. To find correlation between features and diabetes risk, we drew up a correlation matrix and various plots, which we elaborate on in the Results and Discussion section
 
-Supervised: Logistic Regression
+### Supervised: Logistic Regression
 
 In our initial data analysis, we applied the logistic regression algorithm to our large dataset and opted for the SAGA (Stochastic Average Gradient Descent) solver instead of the default LBFGS (Limited-memory Broyden-Fletcher-Goldfarb-Shanno) solver. This decision was based on SAGA's support for L1 regularization, which can help with feature selection and reducing overfitting. However, we encountered overfitting and to address it, we employed both SMOTE oversampling and Stratified K-fold undersampling techniques. To further enhance our model's accuracy, we utilized PCA for dimensionality reduction. We experimented with different combinations of the number of PCA components and the number of folds, monitoring their impact on recall, accuracy, roc score and explained variance.
 
-Unsupervised: KMeans
+### Unsupervised: KMeans
 
 As part of the initial data exploration we also ran the KMeans algorithm on the dataset to explore how well the data was partitioned. This was done via the “elbow method” by repeatedly running KMeans multiple times with different numbers of clusters, evaluating those clusters against a set of metrics, and then looking at how increasing the target cluster count affected the measured cluster evaluation scores by graphing the results. For the purposes of this study we looked at the following cluster evaluation scores: purity, weighted f1, and silhouette across the geometric sequence from 3 to 100.
 Initially, data cleaning and preprocessing will be our fundamental tasks. After data transformation of raw data into a usable format, we will split the dataset into a train (80%) and test (20%) set using Python libraries. As part of this process we may sample the data in a way to remedy the class imbalance that is present in the data. Further, we aim to implement five algorithms for: Supervised and Unsupervised learning. We decided to use Logistic Regression, Decision Trees and Random Forest algorithms for supervised learning while, for unsupervised learning, we intend to use K Means clustering and Gaussian Mixture Model.
@@ -56,7 +56,8 @@ For the project, we plan to conduct a comparative analysis of the performance of
 The specific metrics used for this comparison will be determined by the models chosen for evaluation. In terms of results, it is anticipated that certain machine learning algorithms will demonstrate superior performance in relation to others.
 We might need to address class imbalance, duplicates, missing values, data normalization, and determining optimum number of clusters based on further analysis of the dataset.For the project, we plan to conduct a comparative analysis of the performance of the various models. In order to accomplish this, we will take into consideration a range of potential factors, such as Confusion Matrix, Accuracy, ROC Curves, mutual information scores, and mean squared error.
 
-Data Preprocessing: 
+### Data Pre-processing
+
 Based on the given information, we can infer that the dataset contains a total of 22 features, including 22 discrete and 7 continuous variables, and the target variable is Diabetes_012. The dataset is represented using a histogram, which shows the distribution of the variables.
 
 To identify the most influential features for diabetes, a feature correlation heatmap and bar plot were used. The heatmap and bar plot suggest that HighBP, HighChol, BMI, Stroke, GenHlth, MentHlth, PhysHlth, Age, Education, and Income are the most influential features for diabetes. This means that these variables have a strong correlation with diabetes, and may be used to predict the likelihood of someone developing diabetes.
@@ -128,6 +129,7 @@ During the data preprocessing stage, we did not detect any null values, but we d
 After evaluating the performance of the Logistic regression algorithm on our dataset, we discovered a class imbalance issue where the recall value for the Pre Diabetes class was zero.
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/logistic1.png">
+
 Accuracy: 0.827817307483082
 
 ROC curves for non-diabetes, pre-diabetes and diabetes classes
