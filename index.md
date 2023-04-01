@@ -56,41 +56,73 @@ For the project, we plan to conduct a comparative analysis of the performance of
 The specific metrics used for this comparison will be determined by the models chosen for evaluation. In terms of results, it is anticipated that certain machine learning algorithms will demonstrate superior performance in relation to others.
 We might need to address class imbalance, duplicates, missing values, data normalization, and determining optimum number of clusters based on further analysis of the dataset.For the project, we plan to conduct a comparative analysis of the performance of the various models. In order to accomplish this, we will take into consideration a range of potential factors, such as Confusion Matrix, Accuracy, ROC Curves, mutual information scores, and mean squared error.
 
- The dataset contains 22 features, including 22 discrete and 7 continuous variables, with Diabetes_012 serving as the target variable. HighBP, HighChol, BMI, Stroke, GenHlth, MentHlth, PhysHlth, Age, Education, and Income were identified as the most influential features for diabetes. Smoking and HvyAlcoholConsump, Stroke and HeartDiseaseorAttack, and HighBP and HighChol are features that together increase the risk of diabetes.Based on the findings, the risk of diabetes is equally high for both males and females. However, people who are aged 45 and above are more susceptible to diabetes and pre-diabetes. Additionally, individuals with lower education and income are also at a higher risk of developing diabetes.
+Data Preprocessing: 
+Based on the given information, we can infer that the dataset contains a total of 22 features, including 22 discrete and 7 continuous variables, and the target variable is Diabetes_012. The dataset is represented using a histogram, which shows the distribution of the variables.
 
-1. Features 
+To identify the most influential features for diabetes, a feature correlation heatmap and bar plot were used. The heatmap and bar plot suggest that HighBP, HighChol, BMI, Stroke, GenHlth, MentHlth, PhysHlth, Age, Education, and Income are the most influential features for diabetes. This means that these variables have a strong correlation with diabetes, and may be used to predict the likelihood of someone developing diabetes.
+
+The catplots for Smoking and HvyAlcoholConsump, Stroke and HeartDiseaseorAttack, and HighBP and HighChol suggest that these variables, when present together, increase the risk of diabetes. This indicates that individuals who have these variables are more likely to develop diabetes than those who do not.
+
+The distplots and boxplots suggest that the risk of diabetes is equally high for both males and females. However, people who are aged 45 and above are more susceptible to diabetes and pre-diabetes. Additionally, individuals with lower education and income are also at a higher risk of developing diabetes.
+
+Overall, this information suggests that diabetes is a complex disease that can be influenced by a variety of factors. The most influential features for diabetes include HighBP, HighChol, BMI, Stroke, GenHlth, MentHlth, PhysHlth, Age, Education, and Income. Individuals who have these variables, especially those who have multiple variables together, are more likely to develop diabetes. Additionally, age, education, and income are also important factors to consider when predicting the risk of developing diabetes.
+
+<div align="center">
+
+1. Features
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/histogram.png">
-
-2. No Missing Values
+<br>
+2. No Missing Values 
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/check_null.png">
+<br>
 
 3. Influential
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/correlation_heatmap.png">
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/correlation_bargraph.png">
+<br>
 
 4. Relation between Age and Diabetes
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/age_diabetes.png">
+<br>
 
 5. Relation between Gender and Diabetes
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/gender_diabetes.png">
+<br>
 
 6. Relation between Income and Diabetes
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/income_diabetes.png">
+<br>
 
 7. Relation between Education and Diabetes
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/education_diabetes.png">
+<br>
 
 8. Checking Combined Effects of Smoking and Heavy Alcohol Consumption
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/smoke_hvyalcohol.png">
+<br>
 
 9. Checking Combined Effects of High Blood Pressure and High cholesterol
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/highbp_highcol.png">
+<br>
 
 10. Checking Combined Effects of Stroke and Heart Disease  Attacks
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/stroke_heartdis.png">
+<br>
 
-During the data preprocessing stage, we did not detect any null values, but we did come across missing values and duplicates.
+</div>                                                                                                                      
+                                                                                                                            
+During the data preprocessing stage, we did not detect any null values, but we did come across duplicate rows.
 
 ### Supervised Learning with Logistic Regression
 After evaluating the performance of the Logistic regression algorithm on our dataset, we discovered a class imbalance issue where the recall value for the Pre Diabetes class was zero.
@@ -153,7 +185,7 @@ In addition, modifying the number of folds in the Stratified K-fold undersamplin
 The metric used to evaluate the clustering results did not show a significant improvement as the number of clusters increases. In addition, the confusion matrix reveals that all predicted clusters contain mostly points belonging to the Diabetes_012 class, indicating that the clustering algorithm is not able to identify meaningful patterns or clusters in the data. This observation suggests that a different clustering algorithm or preprocessing technique may be more suitable for this dataset. For instance, increasing the number of initializations for the K Means algorithm with larger values of K may improve the clustering results. By using larger initializations, the algorithm will generate more candidate solutions with different starting points and increase the chance of finding a good local optimum. The expectation is that the algorithm can detect more compact clusters that accurately reflect the actual partitions in the data, resulting in an enhancement of the clustering quality measurement. However, it is important to note that increasing the number of initializations and K can also lead to a longer computational time and higher memory usage.
 
 
-[image here]
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/kmeans_result.png">
 
 ## Timeline:
 
