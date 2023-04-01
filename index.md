@@ -53,7 +53,15 @@ The specific metrics used for this comparison will be determined by the models c
 We might need to address class imbalance, duplicates, missing values, data normalization, and determining optimum number of clusters based on further analysis of the dataset.For the project, we plan to conduct a comparative analysis of the performance of the various models. In order to accomplish this, we will take into consideration a range of potential factors, such as Confusion Matrix, Accuracy, ROC Curves, mutual information scores, and mean squared error.
 
 Data Preprocessing: 
-The dataset contains 22 features, including 22 discrete and 7 continuous variables, with Diabetes_012 serving as the target variable. HighBP, HighChol, BMI, Stroke, GenHlth, MentHlth, PhysHlth, Age, Education, and Income were identified as the most influential features for diabetes. Smoking and HvyAlcoholConsump, Stroke and HeartDiseaseorAttack, and HighBP and HighChol are features that together increase the risk of diabetes.Based on the findings, the risk of diabetes is equally high for both males and females. However, people who are aged 45 and above are more susceptible to diabetes and pre-diabetes. Additionally, individuals with lower education and income are also at a higher risk of developing diabetes.
+Based on the given information, we can infer that the dataset contains a total of 22 features, including 22 discrete and 7 continuous variables, and the target variable is Diabetes_012. The dataset is represented using a histogram, which shows the distribution of the variables.
+
+To identify the most influential features for diabetes, a feature correlation heatmap and bar plot were used. The heatmap and bar plot suggest that HighBP, HighChol, BMI, Stroke, GenHlth, MentHlth, PhysHlth, Age, Education, and Income are the most influential features for diabetes. This means that these variables have a strong correlation with diabetes, and may be used to predict the likelihood of someone developing diabetes.
+
+The catplots for Smoking and HvyAlcoholConsump, Stroke and HeartDiseaseorAttack, and HighBP and HighChol suggest that these variables, when present together, increase the risk of diabetes. This indicates that individuals who have these variables are more likely to develop diabetes than those who do not.
+
+The distplots and boxplots suggest that the risk of diabetes is equally high for both males and females. However, people who are aged 45 and above are more susceptible to diabetes and pre-diabetes. Additionally, individuals with lower education and income are also at a higher risk of developing diabetes.
+
+Overall, this information suggests that diabetes is a complex disease that can be influenced by a variety of factors. The most influential features for diabetes include HighBP, HighChol, BMI, Stroke, GenHlth, MentHlth, PhysHlth, Age, Education, and Income. Individuals who have these variables, especially those who have multiple variables together, are more likely to develop diabetes. Additionally, age, education, and income are also important factors to consider when predicting the risk of developing diabetes.
 
 <div align="center">
 
