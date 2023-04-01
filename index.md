@@ -61,41 +61,41 @@ The dataset contains 22 features, including 22 discrete and 7 continuous variabl
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/histogram.png">
 
 2. No Missing Values 
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/check_null.png">
 
 3. Influential
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/correlation_heatmap.png">
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/correlation_bargraph.png">
 
 4. Relation between Age and Diabetes
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/age_diabetes.png">
 
 5. Relation between Gender and Diabetes
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/gender_diabetes.png">
 
 6. Relation between Income and Diabetes
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/income_diabetes.png">
 
 7. Relation between Education and Diabetes
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/education_diabetes.png">
 
 8. Checking Combined Effects of Smoking and Heavy Alcohol Consumption
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/smoke_hvyalcohol.png">
 
 9. Checking Combined Effects of High Blood Pressure and High cholesterol
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/highbp_highcol.png">
 
 10. Checking Combined Effects of Stroke and Heart Disease  Attacks
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/stroke_heartdis.png">
 
 </div>                                                                                                                      
