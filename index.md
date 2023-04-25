@@ -9,7 +9,7 @@ layout: default
 <h4 align="center"> Naman Dangi, Netra Ghaisas, Hubert Pan, Hajin Kim, Pooja Pache </h4>
 
 ## Video Presentation
-[Presentation link](https://drive.google.com/file/d/1t_1J68w3xckdhbXIvkJ59LCGbe7P8sfG/view?usp=share_link)
+[Presentation link](https://drive.google.com/file/d/1IzPCF4z3U_CF0G7Q5uJl9M7yYKn1iDN6/view?usp=share_link)
 
 ## Introduction:
 
@@ -309,8 +309,8 @@ In addition, as evidenced in the component wise plots we can see that there was 
 (Static Image Alternate)
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/gantt.png">
 
-## Mid-Term Contribution Table:
-<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/MidTerm%20Contribution%20Chart.png">
+## Final Contribution Table:
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/Final_Contribution_Table.png">
 
 ## References: 
 
