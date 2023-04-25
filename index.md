@@ -259,15 +259,13 @@ However, SMOTE and SMOTENN caused the model to overfit, with a balanced accuracy
 
 ##### C.Results for combination of SMOTENN, Random undersampling and Stratified K-fold:
 
-<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/21.png">
+<img width="500px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/21.png">
 
-<img width="500px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/22.png">
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/22.png">
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/23.png">
 
-<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/24.png">
-
-<img width="600px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/25.png">
+<img width="600px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/24.png">
 
 ### Unsupervised Learning with KMeans
 The metric used to evaluate the clustering results did not show a significant improvement as the number of clusters increases. In addition, the confusion matrix reveals that all predicted clusters contain mostly points belonging to the Diabetes_012 class, indicating that the clustering algorithm is not able to identify meaningful patterns or clusters in the data. This observation suggests that a different clustering algorithm or preprocessing technique may be more suitable for this dataset. For instance, increasing the number of initializations for the K Means algorithm with larger values of K may improve the clustering results. By using larger initializations, the algorithm will generate more candidate solutions with different starting points and increase the chance of finding a good local optimum. The expectation is that the algorithm can detect more compact clusters that accurately reflect the actual partitions in the data, resulting in an enhancement of the clustering quality measurement. However, it is important to note that increasing the number of initializations and K can also lead to a longer computational time and higher memory usage.
