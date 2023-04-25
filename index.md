@@ -281,7 +281,7 @@ In general the output values for across the different folds were pretty similar 
 
 However if we look more deeply into the confusion matrix we can see that the problem is that most of the Pre-Diabetic (1) and Diabetic (2) entries are just being erroneously labeled as Non-diabetic (0). This is likely due to the fact that we did not properly even out the representation between the different partitions with smote for this particular experiment.
 
-<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/decision_tree/3.png">
+<img width="600px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/decision_tree/3.png">
 
 
 ### Unsupervised Learning
