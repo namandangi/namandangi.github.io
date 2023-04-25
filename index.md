@@ -204,6 +204,7 @@ In addition, modifying the number of folds in the Stratified K-fold undersamplin
 We evaluated the performance of our random forest model using classification report, confusion matrix, and AUC-ROC scores. Initially, we implemented the model without any hyperparameters and achieved an accuracy of 82.4%. However, the recall value for the Pre-diabetes class (label = 1) was 0.0, indicating a class imbalance issue in our dataset.
 
 Accuracy: 0.8239223622081511
+
               precision    recall  f1-score   support
 
          0.0       0.85      0.96      0.90     38012
