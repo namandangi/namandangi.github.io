@@ -215,37 +215,59 @@ We then used RandomizedSearchCV to test different hyperparameters and select the
 
 To further enhance the model performance, we tried several techniques, such as BalancedRandomForestClassifier, which randomly undersamples each bootstrap sample to balance it. However, this approach gave a low overall accuracy of 62% as compared to the baseline model's 83%. It did show significant improvement in recall for pre-diabetes and diabetes classes and better-balanced accuracy (51%) than the baseline (37%).  Following are the results we obtained for BalancedRandomForestClassifier:
 
+<img width="500px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/4.png">
 
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/5.png">
 
-
-
+<img width="600px" height = "200px"  src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/6.png">
 
 We also used Stratified Kfold validation with the number of K-folds = 5, a combination of SMOTE and stratified K-fold, a combination of SMOTEENN and Stratified K-Fold pipeline, and a combination of SMOTE, Random undersampling, and Stratified K-Fold pipeline. We observed that the Stratified K-fold slightly improved the balanced accuracy compared to the BalancedRandomForestClassifier. Following are the results we obtained for Stratified K-fold:
 
+<img width="500px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/7.png">
 
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/8.png">
 
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/9.png">
 
+<img width="600px" height = "200px"  src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/10.png">
 
 However, SMOTE and SMOTENN caused the model to overfit, with a balanced accuracy (42%) much lower than the training accuracy (91.6%). The last approach, where we applied Undersampling after applying SMOTE and SMOTEENN, reduced overfitting, but the balanced accuracy decreased.
-Results for combination of SMOTE and Stratified K-fold:
+##### A.Results for combination of SMOTE and Stratified K-fold:
 
-		
-		
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/11.png">
+
+<img width="500px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/12.png">
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/13.png">
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/14.png">
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/15.png">
+
+##### B.Results for combination of SMOTENN and Stratified K-fold:
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/16.png">
+
+<img width="500px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/17.png">
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/18.png">
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/19.png">
+
+<img width="600px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/20.png">
 
 
-Results for combination of SMOTENN and Stratified K-fold:
+##### C.Results for combination of SMOTENN, Random undersampling and Stratified K-fold:
 
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/21.png">
 
+<img width="500px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/22.png">
 
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/23.png">
 
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/24.png">
 
-Results for combination of SMOTENN, Random undersampling and Stratified K-fold:
-
-
-
-
-
-
+<img width="600px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/25.png">
 
 ### Unsupervised Learning with KMeans
 The metric used to evaluate the clustering results did not show a significant improvement as the number of clusters increases. In addition, the confusion matrix reveals that all predicted clusters contain mostly points belonging to the Diabetes_012 class, indicating that the clustering algorithm is not able to identify meaningful patterns or clusters in the data. This observation suggests that a different clustering algorithm or preprocessing technique may be more suitable for this dataset. For instance, increasing the number of initializations for the K Means algorithm with larger values of K may improve the clustering results. By using larger initializations, the algorithm will generate more candidate solutions with different starting points and increase the chance of finding a good local optimum. The expectation is that the algorithm can detect more compact clusters that accurately reflect the actual partitions in the data, resulting in an enhancement of the clustering quality measurement. However, it is important to note that increasing the number of initializations and K can also lead to a longer computational time and higher memory usage.
