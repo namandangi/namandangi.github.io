@@ -267,11 +267,40 @@ However, SMOTE and SMOTENN caused the model to overfit, with a balanced accuracy
 
 <img width="600px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/24.png">
 
-### Unsupervised Learning with KMeans
+#### C.Decision Trees
+As seen in the relevant Python notebook, the max depth with the highest accuracy of 0.8332136562438801 was 8. This indicates that extending the depth of the decision tree beyond 8 layers led to overfitting on the training set which resulted in poorer performance on the testing set.
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/decision_tree/1.png">
+<center>Decision Tree Illustration</center>
+
+We then looked at the performance of the max depth 8 decision tree across the multiple folds and output the relevant statistics.
+
+In general the output values for across the different folds were pretty similar with a high overall accuracy of around 0.833. As seen in the excerpted table below, the precision, recall, and f1 scores have been split out by the different label classes 0, 1, and 2. It looks like the precision, recall, and f1-score values were relatively high for the non-diabetic “0.0” class, non-existent for the pre-diabetic “1.0” class and pretty bad for the diabetic “2.0” class. This indicates that the tree model does a better job of identifying non-diabetic people versus the other classes
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/decision_tree/2.png">
+
+However if we look more deeply into the confusion matrix we can see that the problem is that most of the Pre-Diabetic (1) and Diabetic (2) entries are just being erroneously labeled as Non-diabetic (0). This is likely due to the fact that we did not properly even out the representation between the different partitions with smote for this particular experiment.
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/decision_tree/3.png">
+
+
+### Unsupervised Learning
+#### A.KMeans
 The metric used to evaluate the clustering results did not show a significant improvement as the number of clusters increases. In addition, the confusion matrix reveals that all predicted clusters contain mostly points belonging to the Diabetes_012 class, indicating that the clustering algorithm is not able to identify meaningful patterns or clusters in the data. This observation suggests that a different clustering algorithm or preprocessing technique may be more suitable for this dataset. For instance, increasing the number of initializations for the K Means algorithm with larger values of K may improve the clustering results. By using larger initializations, the algorithm will generate more candidate solutions with different starting points and increase the chance of finding a good local optimum. The expectation is that the algorithm can detect more compact clusters that accurately reflect the actual partitions in the data, resulting in an enhancement of the clustering quality measurement. However, it is important to note that increasing the number of initializations and K can also lead to a longer computational time and higher memory usage.
 
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/data_preprocess/kmeans_result.png">
+
+#### B. Gaussian Mixture Model (GMM)
+As seen in the produced graphs, using PCA to reduce the components from 22 to 3 appeared to illustrate the fact that while the different classes did tend to cluster with their similarly labeled data points. This is highlighted in the 3-D graph where the bulk of the visible yellow diabetic data points are clustered in the bottom left corner of the data point cloud. The silhouette score of 0.205 indicates that data points within the same cluster are similar, but they may also be similar to data points in other clusters. Moreover, the Davies-Bouldin index value of 1.553 indicates that the algorithm's clusters are somewhat dissimilar to one another but not optimally distinct. The results suggest that a different clustering algorithm or preprocessing technique would be better suited to this dataset.
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/gmm/1.png">
+
+In addition, as evidenced in the component wise plots we can see that there was a good deal of overlap between the three partitions when it came to each of the individual PCA components.
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/gmm/2.png">
+
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/gmm/3.png">
 
 ## Timeline:
 
