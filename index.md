@@ -54,13 +54,13 @@ For decision trees we went with a 20/80 test split stratified by the Diabetes_01
 
 ### Unsupervised: 
 
-<h4>KMeans</h4>
+<h4>A. KMeans</h4>
 
 As part of the initial data exploration we also ran the KMeans algorithm on the dataset to explore how well the data was partitioned. This was done via the “elbow method” by repeatedly running KMeans multiple times with different numbers of clusters, evaluating those clusters against a set of metrics, and then looking at how increasing the target cluster count affected the measured cluster evaluation scores by graphing the results. For the purposes of this study we looked at the following cluster evaluation scores: purity, weighted f1, and silhouette across the geometric sequence from 3 to 100.
 Initially, data cleaning and preprocessing will be our fundamental tasks. After data transformation of raw data into a usable format, we will split the dataset into a train (80%) and test (20%) set using Python libraries. As part of this process we may sample the data in a way to remedy the class imbalance that is present in the data. Further, we aim to implement five algorithms for: Supervised and Unsupervised learning. We decided to use Logistic Regression, Decision Trees and Random Forest algorithms for supervised learning while, for unsupervised learning, we intend to use K Means clustering and Gaussian Mixture Model.
 Additionally, we plan on data visualization, feature exploration, and comparing accuracy scores of the different supervised and unsupervised algorithms we have used for diabetes prediction.
 
-<h4>Gaussian Mixture Model</h4>
+<h4>B. Gaussian Mixture Model</h4>
 
 For GMM we first used PCA to reduce the number of features from twenty two to three and then used the sklearn GaussianMixture implementation to fit a Gaussian Mixture Model to the resulting data. Lastly, the silhouette score and Davies-Bouldin index were used for evaluating the accuracy.
 
@@ -141,7 +141,9 @@ Overall, this information suggests that diabetes is a complex disease that can b
                                                                                                                             
 During the data preprocessing stage, we did not detect any null values, but we did come across duplicate rows.
 
-### Supervised Learning with Logistic Regression
+### Supervised Learning 
+
+#### A. Logistic Regression
 After evaluating the performance of the Logistic regression algorithm on our dataset, we discovered a class imbalance issue where the recall value for the Pre Diabetes class was zero.
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/logisticreg/logistic1.png">
