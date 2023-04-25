@@ -302,6 +302,11 @@ In addition, as evidenced in the component wise plots we can see that there was 
 
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/gmm/3.png">
 
+## Conclusion:
+
+Through our implementation and analysis of supervised and unsupervised algorithms, we gained several valuable insights. Firstly, we found that highly imbalanced classes can result in models generating inaccurate accuracy scores. Additionally, unsupervised techniques can be highly effective in visualizing data from a specific perspective, particularly when combined with dimensionality reduction techniques such as PCA. To prevent inaccurate accuracy scores from highly imbalanced datasets, it is necessary to adjust data using techniques like SMOTE. Moreover, supervised models typically achieved an accuracy score of around 83%. Although Decision Trees and Random Forest had similar performances, both outperformed Logistic Regression. We also found that non-supervised methods tended to produce low silhouette scores, usually below 0.2. Lastly, the slightly higher score of GMM suggests that it performed slightly better at modeling the data.
+
+
 ## Timeline:
 
 <iframe width="700" height="700" frameborder="0" scrolling="no" src="https://gtvault.sharepoint.com/sites/CS7461MLProjectGroup23/_layouts/15/Doc.aspx?sourcedoc={3313c554-d0e7-4d86-aad0-ed957fcbcf4c}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=true&resen=false&ed1JS=false"></iframe>
