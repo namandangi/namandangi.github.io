@@ -203,7 +203,7 @@ In addition, modifying the number of folds in the Stratified K-fold undersamplin
 #### B. Random Forests:
 We evaluated the performance of our random forest model using classification report, confusion matrix, and AUC-ROC scores. Initially, we implemented the model without any hyperparameters and achieved an accuracy of 82.4%. However, the recall value for the Pre-diabetes class (label = 1) was 0.0, indicating a class imbalance issue in our dataset.
 
-<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/1.png">
+<img width="100px" height = "100px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/random_forest/1.png">
 
 To improve the accuracy, we tuned the hyperparameters, including the n_estimators of our Random Forest classifier. We found that the accuracy started to flatten at n_estimators = 100, and the ROC scores flattened at n_estimators = 300.
 
