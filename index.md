@@ -52,12 +52,17 @@ Initially, we split our data into an 80:20 ratio for the train-test set and star
 For decision trees we went with a 20/80 test split stratified by the Diabetes_012 label. We also used SMOTE to generate an alternative test and train set to take into account the severe imbalance between the different data set classes (but ultimately did not use it). We then repeatedly created entropy reduction based decision trees with maximum heights ranging from 1 to 32 to determine which maximum height yielded the best accuracy.
 
 
-### Unsupervised: KMeans
+### Unsupervised: 
+
+<h4>KMeans</h4>
 
 As part of the initial data exploration we also ran the KMeans algorithm on the dataset to explore how well the data was partitioned. This was done via the “elbow method” by repeatedly running KMeans multiple times with different numbers of clusters, evaluating those clusters against a set of metrics, and then looking at how increasing the target cluster count affected the measured cluster evaluation scores by graphing the results. For the purposes of this study we looked at the following cluster evaluation scores: purity, weighted f1, and silhouette across the geometric sequence from 3 to 100.
 Initially, data cleaning and preprocessing will be our fundamental tasks. After data transformation of raw data into a usable format, we will split the dataset into a train (80%) and test (20%) set using Python libraries. As part of this process we may sample the data in a way to remedy the class imbalance that is present in the data. Further, we aim to implement five algorithms for: Supervised and Unsupervised learning. We decided to use Logistic Regression, Decision Trees and Random Forest algorithms for supervised learning while, for unsupervised learning, we intend to use K Means clustering and Gaussian Mixture Model.
 Additionally, we plan on data visualization, feature exploration, and comparing accuracy scores of the different supervised and unsupervised algorithms we have used for diabetes prediction.
 
+<h4>Gaussian Mixture Model</h4>
+
+For GMM we first used PCA to reduce the number of features from twenty two to three and then used the sklearn GaussianMixture implementation to fit a Gaussian Mixture Model to the resulting data. Lastly, the silhouette score and Davies-Bouldin index were used for evaluating the accuracy.
 
 
 
