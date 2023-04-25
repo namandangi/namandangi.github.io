@@ -203,12 +203,27 @@ In addition, modifying the number of folds in the Stratified K-fold undersamplin
 #### B. Random Forests:
 We evaluated the performance of our random forest model using classification report, confusion matrix, and AUC-ROC scores. Initially, we implemented the model without any hyperparameters and achieved an accuracy of 82.4%. However, the recall value for the Pre-diabetes class (label = 1) was 0.0, indicating a class imbalance issue in our dataset.
 
+Accuracy: 0.8239223622081511
+              precision    recall  f1-score   support
+
+         0.0       0.85      0.96      0.90     38012
+         1.0       0.02      0.00      0.00       926
+         2.0       0.47      0.19      0.27      7019
+
+    accuracy                           0.82     45957
+   macro avg       0.44      0.38      0.39     45957
+weighted avg       0.77      0.82      0.79     45957
+
+ROC AUC Score: 0.7213944886017041
 
 To improve the accuracy, we tuned the hyperparameters, including the n_estimators of our Random Forest classifier. We found that the accuracy started to flatten at n_estimators = 100, and the ROC scores flattened at n_estimators = 300.
 
+![image](https://user-images.githubusercontent.com/36497369/234147073-0c046c5e-d5eb-44bb-9ec7-39f19bf6249d.png)
 
 We then used RandomizedSearchCV to test different hyperparameters and select the best ones. This approach yielded an accuracy of 83.6% and a ROC AUC score of 76.82%, using the best estimator with hyperparameters {'n_estimators': 500, 'min_samples_split': 6, 'min_samples_leaf': 10, 'max_depth': 60}.
 
+Best params: {'n_estimators': 500, 'min_samples_split': 6, 'min_samples_leaf': 10, 'max_depth': 60}
+Best estimator: RandomForestClassifier(max_depth=60, min_samples_leaf=10, min_samples_split=6,
 
 
 To further enhance the model performance, we tried several techniques, such as BalancedRandomForestClassifier, which randomly undersamples each bootstrap sample to balance it. However, this approach gave a low overall accuracy of 62% as compared to the baseline model's 83%. It did show significant improvement in recall for pre-diabetes and diabetes classes and better-balanced accuracy (51%) than the baseline (37%).  Following are the results we obtained for BalancedRandomForestClassifier:
