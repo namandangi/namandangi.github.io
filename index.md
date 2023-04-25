@@ -39,15 +39,15 @@ To start with, we used Python's Pandas and NumPy libraries to load and explore t
 
 ### Supervised: 
 
-<h2>A. Logistic Regression</h2>
+<h5>A. Logistic Regression</h5>
 
 In our initial data analysis, we applied the logistic regression algorithm to our large dataset and opted for the SAGA (Stochastic Average Gradient Descent) solver instead of the default LBFGS (Limited-memory Broyden-Fletcher-Goldfarb-Shanno) solver. This decision was based on SAGA's support for L1 regularization, which can help with feature selection and reducing overfitting. However, we encountered overfitting and to address it, we employed both SMOTE oversampling and Stratified K-fold undersampling techniques. To further enhance our model's accuracy, we utilized PCA for dimensionality reduction. We experimented with different combinations of the number of PCA components and the number of folds, monitoring their impact on recall, accuracy, roc score and explained variance.
 
-<h2>B. Random Forest</h2>
+<h5>B. Random Forest</h5>
 
 Initially, we split our data into an 80:20 ratio for the train-test set and started the implementation of our random forest model using the basic RandomForest Classifier without any hyperparameters. We then fine-tuned the hyperparameters using the RandomForestClassifier and used RandomizedSearchCV to find the best parameters and best estimators. Additionally, we also tried the BalancedRandomForestClassifier approach to enhance the model's accuracy. Furthermore, we implemented various techniques such as SMOTE, SMOTEENN, Undersampling, and Stratified K-fold to augment the accuracy of our model.
 
-<h2>C. Decision Trees</h2>
+<h5>C. Decision Trees</h5>
 
 For decision trees we went with a 20/80 test split stratified by the Diabetes_012 label. We also used SMOTE to generate an alternative test and train set to take into account the severe imbalance between the different data set classes (but ultimately did not use it). We then repeatedly created entropy reduction based decision trees with maximum heights ranging from 1 to 32 to determine which maximum height yielded the best accuracy.
 
