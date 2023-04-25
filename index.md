@@ -37,9 +37,20 @@ Additionally, we plan on data visualization, feature exploration, and comparing 
 
 To start with, we used Python's Pandas and NumPy libraries to load and explore the dataset. For visualizations, we used Matplotlib and Seaborn libraries. As part of pre-processing, we checked for data types, missing and null values, duplicate values and class imbalances. To find correlation between features and diabetes risk, we drew up a correlation matrix and various plots, which we elaborate on in the Results and Discussion section
 
-### Supervised: Logistic Regression
+### Supervised: 
+
+A. Logistic Regression
 
 In our initial data analysis, we applied the logistic regression algorithm to our large dataset and opted for the SAGA (Stochastic Average Gradient Descent) solver instead of the default LBFGS (Limited-memory Broyden-Fletcher-Goldfarb-Shanno) solver. This decision was based on SAGA's support for L1 regularization, which can help with feature selection and reducing overfitting. However, we encountered overfitting and to address it, we employed both SMOTE oversampling and Stratified K-fold undersampling techniques. To further enhance our model's accuracy, we utilized PCA for dimensionality reduction. We experimented with different combinations of the number of PCA components and the number of folds, monitoring their impact on recall, accuracy, roc score and explained variance.
+
+B. Random Forest
+
+Initially, we split our data into an 80:20 ratio for the train-test set and started the implementation of our random forest model using the basic RandomForest Classifier without any hyperparameters. We then fine-tuned the hyperparameters using the RandomForestClassifier and used RandomizedSearchCV to find the best parameters and best estimators. Additionally, we also tried the BalancedRandomForestClassifier approach to enhance the model's accuracy. Furthermore, we implemented various techniques such as SMOTE, SMOTEENN, Undersampling, and Stratified K-fold to augment the accuracy of our model.
+
+C. Decision Trees
+
+For decision trees we went with a 20/80 test split stratified by the Diabetes_012 label. We also used SMOTE to generate an alternative test and train set to take into account the severe imbalance between the different data set classes (but ultimately did not use it). We then repeatedly created entropy reduction based decision trees with maximum heights ranging from 1 to 32 to determine which maximum height yielded the best accuracy.
+
 
 ### Unsupervised: KMeans
 
