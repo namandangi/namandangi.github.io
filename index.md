@@ -277,11 +277,11 @@ We then looked at the performance of the max depth 8 decision tree across the mu
 
 In general the output values for across the different folds were pretty similar with a high overall accuracy of around 0.833. As seen in the excerpted table below, the precision, recall, and f1 scores have been split out by the different label classes 0, 1, and 2. It looks like the precision, recall, and f1-score values were relatively high for the non-diabetic “0.0” class, non-existent for the pre-diabetic “1.0” class and pretty bad for the diabetic “2.0” class. This indicates that the tree model does a better job of identifying non-diabetic people versus the other classes
 
-<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/decision_tree/2.png">
+<img width="600px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/decision_tree/2.png">
 
 However if we look more deeply into the confusion matrix we can see that the problem is that most of the Pre-Diabetic (1) and Diabetic (2) entries are just being erroneously labeled as Non-diabetic (0). This is likely due to the fact that we did not properly even out the representation between the different partitions with smote for this particular experiment.
 
-<img width="600px" height = "200px" src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/decision_tree/3.png">
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/decision_tree/3.png">
 
 
 ### Unsupervised Learning
