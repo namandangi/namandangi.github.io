@@ -314,6 +314,9 @@ Through our implementation and analysis of supervised and unsupervised algorithm
 (Static Image Alternate)
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/gantt.png">
 
+## Mid-Term Contribution Table:
+<img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/MidTerm%20Contribution%20Chart.png">
+
 ## Final Contribution Table:
 <img src="https://raw.githubusercontent.com/namandangi/namandangi.github.io/main/static/Final_Contribution_Table.png">
 
